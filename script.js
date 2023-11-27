@@ -41,9 +41,14 @@ function generatePassword() {
     One = One.concat(specialcharacters);
   }
   console.log(One);
+  var Two = [];
   for (i = 0; i < passwordLength; i++) {
-    
+    var item = One[Math.floor(Math.random()*One.length)];
+    console.log(item);
+    Two.push(item)
+    console.log(Two);
   }
+  return Two.join("");
 }
 
 // Write password to the #password input
